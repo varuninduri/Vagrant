@@ -27,5 +27,7 @@ sudo rm -rf /etc/haproxy/haproxy.cfg
 echo "proxy removed"
 sudo cp haproxy.cfg /etc/haproxy
 echo "proxy copied"
+sudo rm -rf /etc/default/haproxy
+sudo cp /home/vagrant/Vagrant/haproxy /etc/default
 sudo service haproxy restart
 echo "proxy restarted"
