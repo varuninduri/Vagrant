@@ -34,4 +34,6 @@ echo "Checking for $MAVEN: $MAVEN_INSTALLED"
 if [ "" == "$MAVEN_INSTALLED" ]; then
   sudo apt-get install -y $MAVEN
   echo "maven installed"
+  echo "maven installed1"
+  echo "maven installed2"
 fi
