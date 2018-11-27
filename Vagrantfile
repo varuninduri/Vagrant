@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "proxy" do |proxy|
     proxy.vm.box = "ubuntu/trusty64"
         proxy.vm.hostname = "proxy.localnet"
-        proxy.vm.network "forwarded_port", guest: 81, host: 81   # Haproxy
+        proxy.vm.network "forwarded_port", guest: 80, host: 81   # haproxy
         proxy.vm.network "private_network", ip: "192.168.30.2"
         proxy.vm.provision :shell, :path => "proxy.sh"
   end
