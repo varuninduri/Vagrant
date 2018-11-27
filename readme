@@ -1,1 +1,18 @@
+Vagrant Design
+
+Files in the Repo:
+1)	Vagrantfile: file is used to create vm’s.
+2)	app.sh: file is used to installing required software’s in the application vm
+3)	db.sh: file is used to installing mongo db in the database vm
+4)	proxy.sh: file is used to installing haproxy in the proxy vm
+5)	run.sh: file is used to clone and start services in the app server
+Operating System/platform used in the Vagrant: Ubuntu/trusty64
+Workflow:
+vagrant up command will do the below operations
+1)	Create 3 VM’s in Virtual Box
+2)	Install haproxy in proxy server and start the haproxy service
+3)	Install java, maven, git, node in the apps server
+4)	Install mongo db in the database server
+5)	Clone the code from repository and compile using maven
+6)	Run the jar using java and run the ui using node 
 
